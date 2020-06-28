@@ -1,5 +1,7 @@
+
+
 class ProfileFragment(var ownerActivity: AppCompatActivity) : Fragment() {
-    var currentPhoto: String = ""
+    private var currentPhoto: String = ""
 
 /*    companion object {
         fun newInstance() = ProfileFragment(context = )
@@ -52,7 +54,7 @@ class ProfileFragment(var ownerActivity: AppCompatActivity) : Fragment() {
         //region Second Section
         aboutDoviey_rLayout.setOnClickListener {
 
-            var testDialog = Dialog(ownerActivity)
+            val testDialog: Dialog = Dialog(ownerActivity)
             testDialog.setContentView(R.layout.about_dialog)
             testDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             testDialog.title_tv.text = getString(R.string.AboutDoviey)
@@ -61,7 +63,7 @@ class ProfileFragment(var ownerActivity: AppCompatActivity) : Fragment() {
 
         TermsAndConditions_rLayout.setOnClickListener {
 
-            var testDialog = Dialog(ownerActivity)
+            val testDialog = Dialog(ownerActivity)
             testDialog.setContentView(R.layout.about_dialog)
             testDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             testDialog.title_tv.text = getString(R.string.TermsAndConditions)
@@ -70,7 +72,7 @@ class ProfileFragment(var ownerActivity: AppCompatActivity) : Fragment() {
 
         PrivacyPolicy_rLayout.setOnClickListener {
 
-            var testDialog = Dialog(ownerActivity)
+            val testDialog = Dialog(ownerActivity)
             testDialog.setContentView(R.layout.about_dialog)
             testDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             testDialog.title_tv.text = getString(R.string.PrivacyPolicy)
@@ -86,7 +88,7 @@ class ProfileFragment(var ownerActivity: AppCompatActivity) : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
-        // TODO: Use the ViewModel
+ 
     }
 
 
